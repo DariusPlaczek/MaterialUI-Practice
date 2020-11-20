@@ -33,7 +33,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="main-container">
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Dialog
       </Button>
