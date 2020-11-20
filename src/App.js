@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import Input from '@material-ui/core/Input';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -8,10 +9,12 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import './App.css';
 
-import { Form, Input } from './Components/Form';
-
 function App() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [title, setTitle] = useState('Tytuł');
+  const [content, setContent] = useState('Zmien swoj Tytuł i Treści ');
+  const [cacheTitle, setCacheTitle] = useState('');
+  const [cacheContent, setCacheContent] = useState('');
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -19,6 +22,14 @@ function App() {
 
   const handleClose = () => {
     setOpen(false);
+    setCacheTitle('');
+    setCacheContent('');
+  };
+
+  const handleChange = () => {
+    setOpen(false);
+    setTitle(cacheTitle);
+    setContent(cacheContent);
   };
 
   return (
@@ -26,29 +37,35 @@ function App() {
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Dialog
       </Button>
-      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">DIALOG</DialogTitle>
+      <Dialog open={open} onClose={handleChange} aria-labelledby="form-dialog-title">
+      <DialogTitle id="form-dialog-title">{title}</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To subscribe to this website, please enter your email address here. We will send updates
-            occasionally.
+            {content}
           </DialogContentText>
-          <Input margin="dense"/>
-          <TextField
+          <Input
             autoFocus
+            id="title"
             margin="dense"
-            id="name"
-            label="Email Address"
-            type="email"
+            label="Tytuł"
+            type="title"
+            onChange={(event) => setCacheTitle(event.target.value)}
+          />
+          <TextField
+            margin="dense"
+            id="conten"
+            label="Treści"
+            type="content"
+            onChange={(event) => setCacheContent(event.target.value)}
             fullWidth
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            X
+        <Button onClick={handleChange} color="primary">
+            SUBMIT
           </Button>
           <Button onClick={handleClose} color="primary">
-            SUBMIT
+            X
           </Button>
         </DialogActions>
       </Dialog>
@@ -57,13 +74,3 @@ function App() {
 }
 
 export default App;
-
-
-
-// 1. Okno dialogowe
-// Przygotuj komponent okna dialogowego (Dialog), który będzie się wyświetlał np. po kliknięciu w przycisk (komponent Button. Okno powinno mieć możliwość ustawienia tytułu oraz treści. Powinno zawierać też przycisk pozwalający na zamknięcie (np. czarny X lub button OK).
-
-// Tips: Podejrzyj, jak może wyglądać taki komponent na podstawie Material UI: https://material-ui.com/components/dialogs/#customized-dialogs
-
-// Modyfikacja
-// Dodaj w oknie dwa przyciski: Confim oraz Abort. Po kliknięciu w każdy z nich powinna uruchomić się akcja (handler) przekazany z zewnątrz do tego komponentu. Na razie może to być zwykły console.log.
