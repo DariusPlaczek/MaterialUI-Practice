@@ -7,7 +7,8 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 function MaterialUI() {
-  const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState(false);
+	const [disabled, setDisabled] = useState(false)
   const [answerStyle, setAnswerStyle] = useState('none');
 	const [answerBG, setAnswerBG] = useState('red')
   const [answerText, setAnswerText] = useState('Zla odpowiedz')
@@ -23,8 +24,9 @@ function MaterialUI() {
   useEffect(() => {
     if (answerStyle !== 'none') {
         setTimeout(() => {
-            setAnswerStyle('none')
-        }, 2500);
+						setAnswerStyle('none')
+						setDisabled(false);
+        }, 3500);
     }
   }, [answerStyle])
 
@@ -38,19 +40,20 @@ function MaterialUI() {
     setAnswerStyle('block');
 		setAnswerBG('red');
 		setAnswerText('Zla odpowiedz');
-
+		setDisabled(true);
   };
 
   const rightAnswer = () => {
   setOpen(false);
 	setAnswerStyle('block');
 	setAnswerBG('green');
-  setAnswerText('Dobra Odpowiedz');
+	setAnswerText('Dobra Odpowiedz');
+	setDisabled(true);
 };
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+      <Button disabled={disabled} variant="outlined" color="primary" onClick={handleClickOpen}>
       Otwórz mnie
       </Button>
       <Dialog
