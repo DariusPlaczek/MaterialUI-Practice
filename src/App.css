@@ -4,14 +4,25 @@
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+.leftsidebar {
+	width: 25%;
+	height: 100%;
+	background-color: bisque;
 }
 
 .main-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 75%;
+	height: 100%;
 	margin-top: 50px;
 }

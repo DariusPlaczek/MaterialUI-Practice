@@ -7,14 +7,18 @@ import {
 import './App.css';
 
 import Home from './components/Pages/Home';
+import { LeftSideBar, Content } from './components/Container'
 
 function App() {
 
   return (
     <Router>
-      <Switch>
-        <Route exact path='/' component={Home} />
-      </Switch>
+      <LeftSideBar />
+      <Content>
+        <Switch>
+          <Route exact path='/' component={Home} />
+        </Switch>
+      </Content>
     </Router>
   );
 }

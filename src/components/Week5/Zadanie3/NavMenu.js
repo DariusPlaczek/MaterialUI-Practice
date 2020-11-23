@@ -1,23 +1,16 @@
 import React from 'react'
 
-function NavMenu( { children } ) {
+import NavLink from './NavLink';
+
+function NavMenu() {
     return (
         <nav>
-            {children}
+            <NavLink linkName="Home" linkTo="/" />
         </nav>
     )
 }
 
 export default NavMenu
-
-
-
-
-
-
-
-
-
 
 
 
