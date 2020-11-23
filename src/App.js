@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import MaterialUI from './components/MaterialUI';
+import MaterialUI from './components/Week5/Zadanie1/MaterialUI';
 
 function App() {
 
