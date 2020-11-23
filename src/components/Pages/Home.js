@@ -1,6 +1,8 @@
 import React from 'react'
 
-function MaterialUIPage() {
+import MaterialUI from '../Week5/Zadanie1/MaterialUI';
+
+function Zadanie1() {
     return (
     <div className="main-container">
       <MaterialUI />
@@ -8,4 +10,4 @@ function MaterialUIPage() {
   );
 }
 
-export default MaterialUIPage
+export default Zadanie1
