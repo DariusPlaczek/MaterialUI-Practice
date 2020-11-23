@@ -4,9 +4,11 @@ import NavLink from './NavLink';
 
 function NavMenu() {
     return (
-        <nav>
-            <NavLink linkName="Home" linkTo="/" />
-        </nav>
+        <>
+        <NavLink linkName="Home" linkTo="/" />
+        <NavLink linkName="About" linkTo="/" />
+        <NavLink linkName="Contact" linkTo="/" />
+        </>
     )
 }
 
