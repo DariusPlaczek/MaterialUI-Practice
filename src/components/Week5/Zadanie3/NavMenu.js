@@ -1,13 +1,13 @@
 import React from 'react'
 
-import NavLink from './NavLink';
+import NavLinks from './NavLinks';
 
 function NavMenu() {
     return (
         <>
-        <NavLink linkName="Home" linkTo="/" />
-        <NavLink linkName="About" linkTo="/" />
-        <NavLink linkName="Contact" linkTo="/" />
+        <NavLinks isActive="is-active" linkName="Home" linkTo="/" />
+        <NavLinks isActive="is-active" linkName="Week5" linkTo="/week5" />
+        <NavLinks isActive="is-active" linkName="Kontakt" linkTo="/contact" />
         </>
     )
 }

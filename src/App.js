@@ -7,6 +7,8 @@ import {
 import './App.css';
 
 import Home from './components/Pages/Home';
+import Week5 from './components/Pages/Week5'
+import Contact from './components/Pages/Contact'
 import { LeftSideBar, Content } from './components/Container'
 
 function App() {
@@ -17,7 +19,9 @@ function App() {
         <LeftSideBar />
         <Content>
           <Switch>
-            <Route exact path='/' component={Home} />
+            <Route path='/' component={Home} />
+            <Route path='/week5' component={Week5} />
+            <Route path='/contact' component={Contact} />
           </Switch>
         </Content>
       </div>
