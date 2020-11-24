@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
 
-import NavLinks from '../Week5/Zadanie3/NavLinks';
+import NavMenu from '../Week5/Zadanie3/NavMenu'
 
 function ToogleBar() {
     const [open, setOpen] = useState(-251);
@@ -23,9 +21,7 @@ function ToogleBar() {
             <div className="toogle-bar"></div>
         </div>
         <div className="toogle-container" style={styles}>
-          <NavLinks linkStyle="toogle-link" isActive="is-activeToogle" linkName="Home" linkTo="/" />
-          <NavLinks linkStyle="toogle-link" isActive="is-activeToogle" linkName="Week5" linkTo="/week5" />
-          <NavLinks linkStyle="toogle-link" isActive="is-activeToogle" linkName="Kontakt" linkTo="/contact" />
+          <NavMenu styles="toogle-link" isActive="is-activeToogle" />
         </div>
       </div>
     )

@@ -5,7 +5,7 @@ import NavMenu from '../Week5/Zadanie3/NavMenu';
 function LeftSideBar() {
     return (
         <div className="leftsidebar">
-            <NavMenu />
+            <NavMenu styles="link slide-right" isActive="is-active" />
         </div>
     )
 }

@@ -2,12 +2,12 @@ import React from 'react'
 
 import NavLinks from './NavLinks';
 
-function NavMenu() {
+function NavMenu({ styles, isActive }) {
     return (
         <>
-        <NavLinks linkStyle="link slide-right" isActive="is-active" linkName="Home" linkTo="/" />
-        <NavLinks linkStyle="link slide-right" isActive="is-active" linkName="Week5" linkTo="/week5" />
-        <NavLinks linkStyle="link slide-right" isActive="is-active" linkName="Kontakt" linkTo="/contact" />
+        <NavLinks linkStyle={styles} isActive={isActive} linkName="Home" linkTo="/" />
+        <NavLinks linkStyle={styles} isActive={isActive} linkName="Week5" linkTo="/week5" />
+        <NavLinks linkStyle={styles} isActive={isActive} linkName="Kontakt" linkTo="/contact" />
         </>
     )
 }

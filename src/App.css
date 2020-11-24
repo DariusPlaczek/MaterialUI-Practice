@@ -32,9 +32,12 @@ html {
 
 .content {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+
 	width: 85%;
 	padding: 30px;
+	margin-left: 15%;
+	
 }
 
 .link {
