@@ -17,7 +17,6 @@ function App() {
     <Router>
       <div className="main-container">
         <LeftSideBar />
-        <ToogleBar />
         <Content>
           <Switch>
             <Route exact path='/' component={Home} />
@@ -25,6 +24,7 @@ function App() {
             <Route path='/contact' component={Contact} />
           </Switch>
         </Content>
+        <ToogleBar />
       </div>
     </Router>
   );

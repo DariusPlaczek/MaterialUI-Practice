@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom'
 
-function NavLinks( { linkName, linkTo, isActive } ) {
+
+
+function NavLinks( { linkName, linkTo, isActive, linkStyle } ) {
 
     return (
-        <NavLink exact className="link slide-right" activeClassName={isActive} to={linkTo}>
+        <NavLink exact className={linkStyle} activeClassName={isActive} to={linkTo}>
             {linkName}
         </NavLink>
     )

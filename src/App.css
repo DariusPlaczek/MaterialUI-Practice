@@ -49,18 +49,18 @@ html {
 	text-decoration: none;
 	color: #FFD500;
 	margin-left: -35px;
-	-webkit-box-shadow: 4px 4px 7px -4px #000000; 
+	-webkit-box-shadow: 4px 4px 7px -4px #000000;
 	box-shadow: 4px 4px 7px -4px #000000;
 	transition: all .3s ease-out;
 }
 
 .is-active {
 	margin-left: 0;
-	transition: all .3s ease-out; 
+	transition: all .3s ease-out;
 }
 
 .link:hover {
-	transition: all .3s ease-out; 
+	transition: all .3s ease-out;
 	margin-left: -25px;
 }
 
@@ -69,6 +69,13 @@ html {
 }
 
 .toogle-bar-container {
+	position: fixed;
+	right: 0;
+	width: auto;
+	height: auto;
+}
+
+.toogle-bar-menu {
 	position: absolute;
 	top: 25px;
 	right: 25px;
@@ -85,4 +92,33 @@ html {
 
 .toogle-bar:hover {
 	border-color: #334343;
+}
+
+.toogle-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	top: 70px;
+	right: 0;
+	background-color: #334343;
+	width: 250px;
+	height: 250px;
+	transition: all .3s ease-out;
+	-webkit-box-shadow: 4px 4px 7px -4px #000000; 
+	box-shadow: 4px 4px 7px -4px #000000;
+	text-transform: uppercase;
+}
+
+.toogle-link {
+	display: flex;
+	align-items: center;
+	color: #FFD500;
+	padding: 10px;
+	text-decoration: none;
+	height: 35px;
+}
+
+.is-activeToogle {
+	font-weight: 800;
 }
