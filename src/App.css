@@ -51,8 +51,38 @@ html {
 	margin-left: -35px;
 	-webkit-box-shadow: 4px 4px 7px -4px #000000; 
 	box-shadow: 4px 4px 7px -4px #000000;
+	transition: all .3s ease-out;
 }
 
 .is-active {
 	margin-left: 0;
+	transition: all .3s ease-out; 
+}
+
+.link:hover {
+	transition: all .3s ease-out; 
+	margin-left: -25px;
+}
+
+.is-active:hover {
+	margin-left: 0;
+}
+
+.toogle-bar-container {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	width: 29px;
+	cursor: pointer;
+}
+
+.toogle-bar {
+	border: 1px solid #212121;
+	margin: 5px;
+	-webkit-box-shadow: 4px 4px 7px -4px #000000; 
+	box-shadow: 4px 4px 7px -4px #000000;
+}
+
+.toogle-bar:hover {
+	border-color: #334343;
 }

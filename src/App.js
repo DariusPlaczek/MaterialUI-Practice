@@ -9,7 +9,7 @@ import './App.css';
 import Home from './components/Pages/Home';
 import Week5 from './components/Pages/Week5'
 import Contact from './components/Pages/Contact'
-import { LeftSideBar, Content } from './components/Container'
+import { LeftSideBar, Content, ToogleBar } from './components/Container'
 
 function App() {
 
@@ -17,9 +17,10 @@ function App() {
     <Router>
       <div className="main-container">
         <LeftSideBar />
+        <ToogleBar />
         <Content>
           <Switch>
-            <Route path='/' component={Home} />
+            <Route exact path='/' component={Home} />
             <Route path='/week5' component={Week5} />
             <Route path='/contact' component={Contact} />
           </Switch>
