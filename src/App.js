@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 
-import {Home, Week5, Contact } from './components/Pages';
+import { Home, Week5, Contact } from './components/Pages';
 import { LeftSideBar, Content, ToogleBar } from './components/Container'
 
 function App() {
@@ -20,7 +20,6 @@ function App() {
             <Route exact path='/' component={Home} />
             <Route path='/week5' component={Week5} />
             <Route path='/contact' component={Contact} />
-            <Route path='/users' component={Contact} />
           </Switch>
         </Content>
         <ToogleBar />
