@@ -5,6 +5,7 @@
 
 body {
 	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	background-color: #d6cec4;
 }
 
 html {
@@ -123,5 +124,63 @@ html {
 }
 
 .is-activeToogle {
+	font-weight: 800;
+}
+
+/********************* LISTCONTAINER **********************************/
+
+.list-wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+}
+
+.userlist-container {
+	display: flex;
+	flex-direction: column;
+	width: 550px;
+	background-color: #dddddd;
+	border: 1px solid #eeeeee;
+	margin: 15px;
+	border-radius: 15px;
+	-webkit-box-shadow: 4px 4px 7px -4px #000000;
+	box-shadow: 4px 4px 7px -4px #000000;
+	color: #334343;
+	transition: all .3s ease-out;
+	cursor: pointer;
+}
+
+.userlist-container:hover {
+	transform: rotate(-2deg);
+	transition: all .3s ease-out;
+}
+
+.col-2 {
+	display: flex;
+	flex-direction: row;
+}
+
+.another-column {
+	padding: 15px;
+}
+
+.list-image {
+	height: 200px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 15px 0 0 15px;
+}
+
+input, button {
+	padding: 10px;
+	border-radius: 20px;
+	border: 1px solid #dddddd;
+	background-color: #dddddd;
+	margin: 7px;
+}
+
+button {
 	font-weight: 800;
 }

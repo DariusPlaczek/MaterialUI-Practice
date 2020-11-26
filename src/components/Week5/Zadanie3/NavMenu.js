@@ -8,6 +8,7 @@ function NavMenu({ styles, isActive }) {
         <NavLinks linkStyle={styles} isActive={isActive} linkName="Home" linkTo="/" />
         <NavLinks linkStyle={styles} isActive={isActive} linkName="Week5" linkTo="/week5" />
         <NavLinks linkStyle={styles} isActive={isActive} linkName="Kontakt" linkTo="/contact" />
+        <NavLinks linkStyle={styles} isActive={isActive} linkName="Users" linkTo="/users" />
         </>
     )
 }
