@@ -41,8 +41,9 @@ function UsersList() {
     if (!isLoaded) {
       return <div>...isLoading</div>
     } else {
+      console.log(users);
       return filteredUsers.map((value, id )=> (
-        <NavLink to={`/users/${id}`} key={id}>
+        <NavLink to={`/users/${value.id}`} key={id}>
           <div className="userlist-container" >
             <div className="col-2">
             <img className="list-image" alt={value.name.first} src={value.picture.large} />
