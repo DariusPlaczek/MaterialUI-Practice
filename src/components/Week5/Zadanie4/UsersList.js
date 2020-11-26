@@ -17,14 +17,11 @@ function UsersList() {
     (result) => {
       setIsLoaded(true);
       setUsers(result.results);
-      // console.log(result.results)
     },
     (error) => {
       setIsLoaded(true);
       setError(error)
     });
-
-
   }, [])
 
   useEffect(() => {
@@ -73,16 +70,16 @@ function UsersList() {
   }
 
   return (
-    <>
-    <h1>Users</h1>
-    <form onSubmit={usersSearch}>
-      <input type="text" placeholder="Search name" onChange={(event) => setSearchValueCache(event.target.value)}/>
-      <button>SEARCH</button>
-    </form>
-    <div className="list-wrapper">
-      {usersList()}
+    <div className="user">
+      <h1>Users</h1>
+      <form onSubmit={usersSearch}>
+        <input type="text" placeholder="Search name" onChange={(event) => setSearchValueCache(event.target.value)}/>
+        <button>SEARCH</button>
+      </form>
+      <div className="list-wrapper borderTop" >
+        {usersList()}
+      </div>
     </div>
-    </>
   )
 }
 

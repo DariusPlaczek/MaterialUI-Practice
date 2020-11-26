@@ -13,6 +13,10 @@ html {
 	width: 100%;
 }
 
+a {
+	text-decoration: none;
+}
+
 .main-container {
 	display: flex;
 	flex-direction: row;
@@ -34,11 +38,9 @@ html {
 .content {
 	display: flex;
 	flex-direction: column;
-
 	width: 85%;
 	padding: 30px;
 	margin-left: 15%;
-	
 }
 
 .link {
@@ -134,7 +136,6 @@ html {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	
 }
 
 .userlist-container {
@@ -150,6 +151,8 @@ html {
 	color: #334343;
 	transition: all .3s ease-out;
 	cursor: pointer;
+	text-decoration: none;
+
 }
 
 .userlist-container:hover {
@@ -183,4 +186,32 @@ input, button {
 
 button {
 	font-weight: 800;
+	cursor: pointer;
+	-webkit-box-shadow: 4px 4px 7px -7px #000000;
+	box-shadow: 4px 4px 7px -7px #000000;
+}
+
+.user {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input:focus {
+	border-radius: 20px;
+	border: 1px transparent solid;
+}
+
+.footer-user {
+	display: flex;
+	justify-content: space-around;
+	width: 580px;
+}
+
+.borderTop {
+	border-top: 1px solid #c0bab2;
+}
+
+.borderBottom {
+	border-bottom: 1px solid #c0bab2;
 }
