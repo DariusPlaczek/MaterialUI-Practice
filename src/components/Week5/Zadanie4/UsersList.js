@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 
-const API_URL = process.env.API_USERS;
 
 function UsersList() {
   const [users, setUsers] = useState([]);
