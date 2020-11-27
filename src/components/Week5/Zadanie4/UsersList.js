@@ -9,7 +9,7 @@ function UsersList() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [searchValueCache, setSearchValueCache] = useState('')
- 
+
   useEffect(() => {
     fetch('http://localhost:3000/users.json')
    .then((response) => response.json())
@@ -41,7 +41,6 @@ function UsersList() {
     if (!isLoaded) {
       return <div>...isLoading</div>
     } else {
-      console.log(users);
       return filteredUsers.map((value, id )=> (
         <NavLink to={`/users/${value.id}`} key={id}>
           <div className="userlist-container" >

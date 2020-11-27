@@ -25,21 +25,21 @@ function UserProfile() {
       }
   }, [id]);
 
-  // useEffect(() => {
-  //   if (parseInt(id) === userLength.length-1) {
-  //     setNextUser(true)
-  //     return
-  //   } else {
-  //     setNextUser(false);
-  //   }
+  useEffect(() => {
+    if (parseInt(id) === userLength.length-1) {
+      setNextUser(true)
+      return
+    } else {
+      setNextUser(false);
+    }
 
-  //   if (id === '0') {
-  //     setPrevUser(true)
-  //     return
-  //   } else {
-  //     setPrevUser(false)
-  //   }
-  // }, [userLength, id])
+    if (id === '0') {
+      setPrevUser(true)
+      return
+    } else {
+      setPrevUser(false)
+    }
+  }, [userLength, id])
 
   const userProfile = () => {
 
