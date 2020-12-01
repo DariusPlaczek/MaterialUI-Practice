@@ -12,8 +12,8 @@ function UserProfile() {
 
   useEffect(() => {
     try {
-      fetch('http://localhost:3000/users.json')
-  //    fetch(`http://localhost:3000/users/${id}`)
+      fetch('http://localhost:3000/user.json')
+  //    fetch(`http://localhost:3000/userData.json/${id}`)
       .then((response) => response.json())
       .then(
         (result) => {

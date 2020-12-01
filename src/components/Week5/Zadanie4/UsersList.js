@@ -11,12 +11,12 @@ function UsersList() {
   const [searchValueCache, setSearchValueCache] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:3000/users.json')
+    fetch('http://localhost:3000/userData.json')
    .then((response) => response.json())
    .then(
     (result) => {
       setIsLoaded(true);
-      setUsers(result.results);
+      setUsers(result);
     },
     (error) => {
       setIsLoaded(true);
