@@ -1,0 +1,54 @@
+
+    {
+        "id": "0",
+        "gender": "male",
+        "name": {
+        "title": "Mr",
+        "first": "Arif",
+        "last": "Wein"
+        },
+        "location": {
+        "street": {
+        "number": 7297,
+        "name": "Schulweg"
+        },
+        "city": "Bad Sobernheim",
+        "state": "Baden-Württemberg",
+        "country": "Germany",
+        "postcode": 77265,
+        "coordinates": {
+        "latitude": "25.8311",
+        "longitude": "-171.1142"
+        },
+        "timezone": {
+        "offset": "-10:00",
+        "description": "Hawaii"
+        }
+        },
+        "email": "arif.wein@example.com",
+        "login": {
+        "uuid": "1f1bd10b-b433-4c06-8b6c-3d00d3d57b05",
+        "username": "greenrabbit297",
+        "password": "pudding",
+        "salt": "TpnmXayW",
+        "md5": "26df308572a01916e53a9ef356d96b79",
+        "sha1": "85d9f74caebd92c79f1b1ee06ca2de8d76f79886",
+        "sha256": "8238854b7deda47916aa621ffdc5010e12b33cb1eaf0e5f45965a68118d4cfb2"
+        },
+        "dob": {
+        "date": "1991-02-25T14:11:26.183Z",
+        "age": 29
+        },
+        "registered": {
+        "date": "2002-09-05T18:35:12.393Z",
+        "age": 18
+        },
+        "phone": "0818-3460371",
+        "cell": "0179-3760678",
+        "picture": {
+        "large": "https://randomuser.me/api/portraits/men/5.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/5.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/5.jpg"
+        },
+        "nat": "DE"
+        }

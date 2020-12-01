@@ -13,11 +13,13 @@ function UserProfile() {
   useEffect(() => {
     try {
       fetch('http://localhost:3000/users.json')
+  //    fetch(`http://localhost:3000/users/${id}`)
       .then((response) => response.json())
       .then(
         (result) => {
-          setUsers(result.results[id]);
-          setUserLength(result.results);
+         setUsers(result.results[id]);
+         setUserLength(result.results);
+    
            setIsLoaded(true);
         })
       } catch(error) {
@@ -32,7 +34,7 @@ function UserProfile() {
     } else {
       setNextUser(false);
     }
-    
+
     if (id === '0') {
       setPrevUser(true)
       return
