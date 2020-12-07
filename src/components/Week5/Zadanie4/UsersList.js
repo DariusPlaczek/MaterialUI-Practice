@@ -11,12 +11,12 @@ function UsersList() {
   const [searchValueCache, setSearchValueCache] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:3000/userData.json')
+    fetch('https://randomuser.me/api/?results=10')
    .then((response) => response.json())
    .then(
     (result) => {
       setIsLoaded(true);
-      setUsers(result);
+      setUsers(result.results);
     },
     (error) => {
       setIsLoaded(true);
