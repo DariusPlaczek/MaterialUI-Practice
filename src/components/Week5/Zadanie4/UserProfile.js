@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 
 
@@ -12,7 +12,7 @@ function UserProfile() {
 
   useEffect(() => {
     try {
-/    fetch('http://localhost:3000/user.json')
+    fetch('http://localhost:3000/user.json')
   //    fetch(`http://localhost:3000/userData.json/${id}`)
       .then((response) => response.json())
       .then(

@@ -5,7 +5,7 @@ import UserList from '../Week5/Zadanie4/UsersList'
 function Users() {
     return (
         <>
-         <UserList />   
+         <UserList />
         </>
     )
 }
